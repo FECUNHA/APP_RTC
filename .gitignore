@@ -1,2 +1,11 @@
 UseCaseAPI_RTC/.classpath
 UseCaseAPI_RTC/.settings/org.eclipse.jdt.core.prefs
+UseCaseAPI_RTC/bin/connection/Conexao.class
+UseCaseAPI_RTC/bin/connection/LoginHandler.class
+UseCaseAPI_RTC/bin/connection/SysoutProgressMonitor.class
+UseCaseAPI_RTC/bin/custom/ComunicacaoWorkItem$1.class
+UseCaseAPI_RTC/bin/custom/ComunicacaoWorkItem.class
+UseCaseAPI_RTC/bin/custom/CreateWorkItem$LoginHandler.class
+UseCaseAPI_RTC/bin/custom/CreateWorkItem$WorkItemInitialization.class
+UseCaseAPI_RTC/bin/custom/CreateWorkItem.class
+UseCaseAPI_RTC/bin/main/App.class
