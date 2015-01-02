@@ -92,14 +92,16 @@ public class CreateWorkItem {
 		//	return false;
 		//}
 		
-		String repositoryURI= "https://svuxprtc1.gvt.net.br:9443/ccm/";
-		String userId= "p9916634";
-		String password= "Psico1982";
+		String repositoryURI= "https://jazz.net/sandbox01-ccm/web";
 		
-		String projectAreaName= "IT - Ferramentas";
+		final String userId = "user"; // Retrieve the userId in a secure way
+		final String password = "pass"; // Retrieve the password in a
+													// secure way
+		
+		String projectAreaName= "PA Teste";
 		String typeIdentifier= "com.ibm.team.apt.workItemType.story";
 		String summary= "Teste de criação de story por client Java";
-		String categoryName= "IT - Ferramentas";
+		String categoryName= "Categoria de teste de workitem";
 		
 		ITeamRepository teamRepository= TeamPlatform.getTeamRepositoryService().getTeamRepository(repositoryURI);
 		teamRepository.registerLoginHandler(new LoginHandler(userId, password));
