@@ -31,6 +31,7 @@ import com.ibm.team.workitem.client.IWorkItemClient;
 import com.ibm.team.workitem.client.IWorkItemWorkingCopyManager;
 import com.ibm.team.workitem.client.WorkItemWorkingCopy;
 import com.ibm.team.workitem.common.internal.model.WorkItemHandle;
+import com.ibm.team.workitem.common.internal.workflow.WorkflowException;
 import com.ibm.team.workitem.common.model.IAttribute;
 import com.ibm.team.workitem.common.model.ITimeSheetEntry;
 import com.ibm.team.workitem.common.model.ITimeSheetEntryHandle;
@@ -109,9 +110,12 @@ public class ComunicacaoWorkItem   {
 		}
 	}
 	
-	public IWorkItem getWorkItemById(int workItemNumber, ITeamRepository repo) throws TeamRepositoryException{
+	public IWorkItem getWorkItemById(int workItemNumber, ITeamRepository repo) throws TeamRepositoryException,WorkflowException{
 		// Gather the necessary clients and managers necessary from the repository
 		// In this case we need the source control workspace manager and the item manager
+		try{
+			
+		
 		IWorkItemClient workItemClient = (IWorkItemClient)repo.getClientLibrary(IWorkItemClient.class);
 		
 		
@@ -173,6 +177,14 @@ public class ComunicacaoWorkItem   {
 			
 		}
 		
+		}catch (WorkflowException e) {
+			throw e;
+		}
+		
+		catch (TeamRepositoryException e) {
+			throw e;
+		}
+			
 
 //		copiedWorkItem.setHTMLSummary(XMLString.createFromPlainText("Projeto Retenção Inteligente - editado API"));
 //

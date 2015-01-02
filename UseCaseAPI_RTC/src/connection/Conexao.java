@@ -21,10 +21,10 @@ public class Conexao {
 
 	public ITeamRepository getConnection() {
 
-		final String userId = "p9916634"; // Retrieve the userId in a secure way
-		final String password = "Psico1982"; // Retrieve the password in a
+		final String userId = "user"; // Retrieve the userId in a secure way
+		final String password = "pass"; // Retrieve the password in a
 													// secure way
-		String repoUri = "https://svuxprtc1.gvt.net.br:9443/ccm";
+		String repoUri = "https://jazz.net/sandbox01-ccm/web";
 		ITeamRepository repo = null;
 
 		try {
